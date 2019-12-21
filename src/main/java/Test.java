@@ -16,9 +16,9 @@ import weka.filters.unsupervised.attribute.Normalize;
  * Github link: https://github.com/emara-geek/weka-example
  */
 public class Test {
-
-    public static final String DATASETPATH = "/Users/Emaraic/Temp/ml/iris.2D.arff";
-    public static final String MODElPATH = "/Users/Emaraic/Temp/ml/model.bin";
+    
+    public static final String DATASETPATH = "data/iris.2D.arff";
+    public static final String MODElPATH = "data/model.bin";
 
     public static void main(String[] args) throws Exception {
         
