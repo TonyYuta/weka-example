@@ -1,0 +1,28 @@
+@relation iris-weka.filters.unsupervised.attribute.Remove-R1-2
+
+@attribute petallength numeric
+@attribute petalwidth numeric
+@attribute petalcolor numeric
+@attribute class {Flower01,Flower02,Flower03,Flower04}
+
+@data
+5.8,2.2,3.0,Flower03
+4.5,1.7,3.2,Flower03
+5.5,1.8,2.9,Flower03
+4.5,1.5,1.2,Flower02
+6.9,2.3,3.6,Flower03
+1.2,0.2,6.5,Flower01
+5.7,2.1,3.8,Flower03
+4.5,1.3,1.1,Flower02
+5.6,2.4,3.6,Flower03
+4.8,1.8,3.3,Flower03
+2.7,2.5,5.0,Flower04
+3.0,2.8,5.0,Flower04
+2.9,2.9,5.4,Flower04
+2.8,2.8,5.0,Flower04
+2.7,3.0,5.2,Flower04
+2.6,2.7,5.1,Flower04
+2.5,2.8,5.3,Flower04
+2.6,2.6,5.2,Flower04
+2.7,2.9,5.5,Flower04
+2.9,2.9,5.2,Flower04

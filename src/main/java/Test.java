@@ -16,7 +16,7 @@ import weka.filters.unsupervised.attribute.Normalize;
  * Github link: https://github.com/emara-geek/weka-example
  */
 public class Test {
-    
+
     public static final String DATASETPATH = "data/iris.2D.arff";
     public static final String MODElPATH = "data/model.bin";
 
@@ -53,8 +53,9 @@ public class Test {
 
         //classifiy a single instance 
         ModelClassifier cls = new ModelClassifier();
-        String classname =cls.classifiy(Filter.useFilter(cls.createInstance(1.6, 0.2, 0), filter), MODElPATH);
-        System.out.println("\n The class name for the instance with petallength = 1.6 and petalwidth =0.2 is  " +classname);
+        //String classname =cls.classifiy(Filter.useFilter(cls.createInstance(1.6, 0.2, 0), filter), MODElPATH);
+        String classname =cls.classifiy(Filter.useFilter(cls.createInstance(7.0, 2.1, 0), filter), MODElPATH);
+        System.out.println("\n The class name for the instance with petallength = 470 and petalwidth =2.1 is  " +classname);
 
     }
 
