@@ -17,8 +17,9 @@ import weka.filters.unsupervised.attribute.Normalize;
  */
 public class Test {
 
-    public static final String DATASETPATH = "data/iris.2D.arff";
-    public static final String MODElPATH = "data/model.bin";
+   // public static final String DATASETPATH = "data/iris.2D.arff";
+   public static final String DATASETPATH = "data/iris1-2-7-10_with_colors.2D.arff";
+   public static final String MODElPATH = "data/model.bin";
 
     public static void main(String[] args) throws Exception {
         
@@ -54,8 +55,12 @@ public class Test {
         //classifiy a single instance 
         ModelClassifier cls = new ModelClassifier();
         //String classname =cls.classifiy(Filter.useFilter(cls.createInstance(1.6, 0.2, 0), filter), MODElPATH);
-        String classname =cls.classifiy(Filter.useFilter(cls.createInstance(7.0, 2.1, 0), filter), MODElPATH);
-        System.out.println("\n The class name for the instance with petallength = 470 and petalwidth =2.1 is  " +classname);
+       // String classname =cls.classifiy(Filter.useFilter(cls.createInstance(7.0, 2.1, 0), filter), MODElPATH);
+        //String classname =cls.classifiy(Filter.useFilter(cls.createInstance(2.7, 2.5, 5.1, 0), filter), MODElPATH);
+        //System.out.println("\n The class name for the instance with petallength = 2.7, petalwidth =2.5, and petalcolor = 5.1  is  " +classname);
+
+        String classname =cls.classifiy(Filter.useFilter(cls.createInstance(4.7, 1.4, 1.3, 0), filter), MODElPATH);
+        System.out.println("\n The class name for the instance with petallength = 4.7, petalwidth =1.4, and petalcolor = 1.3  is  " +classname);
 
     }
 

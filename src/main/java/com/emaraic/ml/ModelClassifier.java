@@ -22,33 +22,49 @@ public class ModelClassifier {
 
     private Attribute petallength;
     private Attribute petalwidth;
+    private Attribute petalcolor;
 
     private ArrayList<Attribute> attributes;
     private ArrayList<String> classVal;
     private Instances dataRaw;
 
-
     public ModelClassifier() {
         petallength = new Attribute("petallength");
         petalwidth = new Attribute("petalwidth");
+        petalcolor = new Attribute("petalcolor");
         attributes = new ArrayList<Attribute>();
         classVal = new ArrayList<String>();
+        /*
         classVal.add("Iris-setosa");
         classVal.add("Iris-versicolor");
         classVal.add("Iris-virginica");
+        */
+        classVal.add("Flower01");
+        classVal.add("Flower02");
+        classVal.add("Flower03");
+        classVal.add("Flower04");
 
         attributes.add(petallength);
         attributes.add(petalwidth);
+        attributes.add(petalcolor);
 
         attributes.add(new Attribute("class", classVal));
         dataRaw = new Instances("TestInstances", attributes, 0);
         dataRaw.setClassIndex(dataRaw.numAttributes() - 1);
     }
 
-    
+/*
     public Instances createInstance(double petallength, double petalwidth, double result) {
         dataRaw.clear();
         double[] instanceValue1 = new double[]{petallength, petalwidth, 0};
+        dataRaw.add(new DenseInstance(1.0, instanceValue1));
+        return dataRaw;
+    }
+*/
+
+    public Instances createInstance(double petallength, double petalwidth, double petalcolor, double result) {
+        dataRaw.clear();
+        double[] instanceValue1 = new double[]{petallength, petalwidth, petalcolor, 0};
         dataRaw.add(new DenseInstance(1.0, instanceValue1));
         return dataRaw;
     }
